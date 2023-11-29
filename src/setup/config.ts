@@ -1,15 +1,15 @@
 import {
   APP_VERSION,
-  DISCORD_LINK,
   DONATION_LINK,
   GITHUB_LINK,
+  INSTAGRAM_LINK,
 } from "./constants";
 
 interface Config {
   APP_VERSION: string;
   GITHUB_LINK: string;
   DONATION_LINK: string;
-  DISCORD_LINK: string;
+  INSTAGRAM_LINK: string;
   TMDB_READ_API_KEY: string;
   CORS_PROXY_URL: string;
   NORMAL_ROUTER: boolean;
@@ -20,7 +20,7 @@ export interface RuntimeConfig {
   APP_VERSION: string;
   GITHUB_LINK: string;
   DONATION_LINK: string;
-  DISCORD_LINK: string;
+  INSTAGRAM_LINK: string;
   TMDB_READ_API_KEY: string;
   NORMAL_ROUTER: boolean;
   PROXY_URLS: string[];
@@ -32,7 +32,7 @@ const env: Record<keyof Config, undefined | string> = {
   APP_VERSION: undefined,
   GITHUB_LINK: undefined,
   DONATION_LINK: undefined,
-  DISCORD_LINK: undefined,
+  INSTAGRAM_LINK: undefined,
   CORS_PROXY_URL: import.meta.env.VITE_CORS_PROXY_URL,
   NORMAL_ROUTER: import.meta.env.VITE_NORMAL_ROUTER,
   BACKEND_URL: import.meta.env.VITE_BACKEND_URL,
@@ -55,7 +55,7 @@ export function conf(): RuntimeConfig {
     APP_VERSION,
     GITHUB_LINK,
     DONATION_LINK,
-    DISCORD_LINK,
+    INSTAGRAM_LINK,
     BACKEND_URL: getKey("BACKEND_URL"),
     TMDB_READ_API_KEY: getKey("TMDB_READ_API_KEY"),
     PROXY_URLS: getKey("CORS_PROXY_URL")

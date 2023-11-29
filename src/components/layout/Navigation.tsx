@@ -83,7 +83,7 @@ export function Navigation(props: NavigationProps) {
                 <BrandPill clickable />
               </Link>
               <a
-                href={conf().DISCORD_LINK}
+                href={conf().INSTAGRAM_LINK}
                 target="_blank"
                 rel="noreferrer"
                 className="text-xl text-white tabbable rounded-full"

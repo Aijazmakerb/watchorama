@@ -30,6 +30,7 @@ export function useScrape() {
       let lastId: string | null = null;
       const output = await providers.runAll({
         media,
+        sourceOrder: ["flixhq"],
         events: {
           init(evt) {
             setSources(
@@ -104,7 +105,7 @@ export function useScrape() {
           return { ...s };
         });
       }
-
+      console.log(output);
       return output;
     },
     [setSourceOrder, setSources]
