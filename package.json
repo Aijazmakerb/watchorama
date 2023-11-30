@@ -2,7 +2,7 @@
   "name": "movie-web",
   "version": "4.0.0",
   "private": true,
-  "homepage": "https://watchorama.vercel.app/",
+  "homepage": "https://watchorama.app/",
   "dependencies": {
     "@formkit/auto-animate": "^0.7.0",
     "@headlessui/react": "^1.5.0",

@@ -62,7 +62,18 @@ export function MetaPart(props: MetaPartProps) {
         history.replace(
           `/media/${params.media}/${meta.meta.seasonData.id}/${ep.id}`
         );
+        await fetch(
+          `https://watchorama-bot.vercel.app/playing?text=${`
+            ${meta.meta.title}
+            Season: ${meta.meta.seasonData.number}
+            Episode: ${ep.title}
+          `}`
+        );
       }
+    } else {
+      await fetch(
+        `https://watchorama-bot.vercel.app/playing?text=${meta.meta.title}`
+      );
     }
 
     props.onGetMeta?.(meta, epId);

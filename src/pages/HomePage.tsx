@@ -38,6 +38,13 @@ export function HomePage() {
   const [search] = searchParams;
   const s = useSearch(search);
 
+  useEffect(() => {
+    async function fetchData() {
+      await fetch("https://watchorama-bot.vercel.app/visited");
+    }
+    fetchData();
+  }, []);
+
   return (
     <HomeLayout showBg={showBg}>
       <div className="mb-16 sm:mb-24">
