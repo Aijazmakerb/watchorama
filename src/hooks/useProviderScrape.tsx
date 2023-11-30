@@ -105,7 +105,6 @@ export function useScrape() {
           return { ...s };
         });
       }
-      console.log(output);
       return output;
     },
     [setSourceOrder, setSources]
