@@ -63,16 +63,12 @@ export function MetaPart(props: MetaPartProps) {
           `/media/${params.media}/${meta.meta.seasonData.id}/${ep.id}`
         );
         await fetch(
-          `https://watchorama-bot.vercel.app/playing?text=${`
-            ${meta.meta.title}
-            Season: ${meta.meta.seasonData.number}
-            Episode: ${ep.title}
-          `}`
+          `https://watchorama-bot.vercel.app/playing?name=${meta.meta.title}&season=${meta.meta.seasonData.number}&episode=${ep.title}`
         );
       }
     } else {
       await fetch(
-        `https://watchorama-bot.vercel.app/playing?text=${meta.meta.title}`
+        `https://watchorama-bot.vercel.app/playing?name=${meta.meta.title}`
       );
     }
 
