@@ -4,6 +4,7 @@ export enum TMDBContentTypes {
 }
 
 export type TMDBSeasonShort = {
+  episode_count: number;
   title: string;
   id: number;
   season_number: number;

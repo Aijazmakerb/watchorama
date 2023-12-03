@@ -56,6 +56,7 @@ export function formatTMDBMetaResult(
         id: v.id,
         season_number: v.season_number,
         title: v.name,
+        episode_count: v.episode_count,
       })),
       poster: getMediaPoster(show.poster_path) ?? undefined,
       original_release_year: new Date(show.first_air_date).getFullYear(),

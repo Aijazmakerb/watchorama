@@ -39,6 +39,7 @@ export interface PlayerMeta {
     tmdbId: string;
     title: string;
   };
+  total_seasons?: number;
 }
 
 export interface Caption {
@@ -90,6 +91,7 @@ export function metaToScrapeMedia(meta: PlayerMeta): ScrapeMedia {
       imdbId: meta.imdbId,
       episode: meta.episode,
       season: meta.season,
+      total_seasons: meta.total_seasons,
     };
   }
 

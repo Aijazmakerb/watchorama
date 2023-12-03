@@ -53,7 +53,8 @@ export function formatTMDBMeta(
   let seasons: undefined | MWSeasonMeta[];
   if (type === MWMediaType.SERIES) {
     seasons = media.seasons
-      ?.sort((a, b) => a.season_number - b.season_number)
+      ?.filter((v) => v.episode_count > 0) // Filter out seasons with episode_count <= 0
+      .sort((a, b) => a.season_number - b.season_number)
       .map(
         (v): MWSeasonMeta => ({
           title: v.title,

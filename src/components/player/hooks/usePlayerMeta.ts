@@ -51,6 +51,7 @@ export function usePlayerMeta() {
             title: m.meta.seasonData.title,
             tmdbId: m.meta.seasonData.id,
           },
+          total_seasons: m.meta.seasons.length,
         };
       } else {
         playerMeta = {
